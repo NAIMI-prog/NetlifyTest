@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Mon application pour apprendre le dialecte algérien </title>
+    <style>
+header{
+color: rgb(59, 21, 66) ;
+border: solid 5px rgb(7, 28, 122);
+margin-left: 300px ;
+margin-right: 300px;
+background-color: rgb(101, 135, 199);
+
+}
+body{
+
+    background-color: rgb(10, 8, 151);
+    text-align: center;
+    padding-top: 20px;
+    border: solid 3px rgb(17, 93, 138);
+}
+
+
+h2 {
+color: white ;
+border: solid 5px rgb(7, 28, 122);
+margin-left: 300px ;
+margin-right: 300px;
+background-color: rgb(101, 135, 199);
+
+}
+
+input.temps{
+    background-color: rgb(51, 117, 7);
+    border-radius: 3px;
+    color: white;
+    display: inline-block;
+    text-transform: uppercase;
+    size: 3px;
+    width: 100px;
+
+}
+
+ul{
+list-style: none;
+}
+
+li{
+display: inline;
+
+}
+
+#valider{
+
+    background-color: rgb(76, 6, 97);
+    border-radius: 1px;
+    color: white;
+    display: inline-block;
+    text-transform: uppercase;
+    size: 3px;
+    width: 100px;
+    
+} 
+
+.paramètres{
+    
+    margin-bottom: 5px;
+    margin-top: 50px;
+   
+}
+
+label{ color: white;
+}
+
+footer{
+    margin-top:50px;
+    color: white;
+}
+
+    </style>
+</head>
+<header><h1><img src="France.png" > Apprendre le dialecte algérien <img src="Algérie.png" ></h1></header>
+<body>
+    
+<div class="paramètres">
+    <h2>Le temps souhaité:</h2>
+
+    <input class="temps"
+       type="button"
+       value="présent">
+       <input class="temps"
+       type="button"
+       value="passé">
+       <input class="temps"
+       type="button"
+       value="future">
+    <ul>
+    <select id="choix"  name="verbe" width="300px">
+        <option id=" ">-- sélectionnez un verbe --</option>
+        <option id="Être">Être</option>
+        <option id="Avoir">Avoir</option>
+        <option id="Acheter">Acheter</option>
+      </select>
+
+      <select id="choix"  name="verbe" width="300px">
+        <option id=" ">-- sélectionnez un nom --</option>
+        <option id="Maison">Maison</option>
+        <option id="Magasin">Magasin</option>
+      </select>
+
+      <select id="choix"  name="verbe" width="300px">
+        <option id=" ">-- sélectionnez un adjectif --</option>
+        <option id="Grand">Grand</option>
+        <option id="Petit">Petit</option>
+        <option id="Chaud">Chaud</option>
+      </select>
+
+    </ul>
+
+<img src="Dialecte.PNG" width="300" >
+</div>
+<p>
+    <label for="tentacles">Le nombre de phrase à afficher:</label>
+    <input type="number" min ="1" max="9"/>
+</p>
+
+   
+    <input id="valider"
+       type="button"
+       value="Valider">
+
+       <footer>
+        <font size="1">V1.0.0</font>
+
+       </footer>
+   
+
+</body>
+</html>
