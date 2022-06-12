@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Mon application pour apprendre le dialecte algérien </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="dialect.js"></script>
     <style>
 header {
 color: rgb(59, 21, 66) ;
@@ -33,7 +35,7 @@ background-color: rgb(101, 135, 199);
 
 }
 
-input.temps{
+input#temps{
     background-color: rgb(51, 117, 7);
     border-radius: 3px;
     color: white;
@@ -53,7 +55,7 @@ display: inline;
 
 }
 
-#valider{
+#Afficher{
 
     background-color: rgb(76, 6, 97);
     border-radius: 1px;
@@ -64,6 +66,13 @@ display: inline;
     width: 100px;
     
 } 
+#SelectTenses{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 10px;
+    background-color:azure;
+   
+}
 
 .paramètres{
     
@@ -80,25 +89,73 @@ footer{
     color: white;
 }
 
+#model{
+
+    height: 400px;
+    width: 50%;
+    background-color:rgb(236, 226, 237);
+    position: absolute;
+    top: -800px;
+    left: 25%;
+}
+
+#Result{
+    text-align: center;
+    margin-top: 100px;
+    margin-left:30px ;
+    margin-right:30px ;
+}
+
+#DZFR{
+    background-color: rgb(55, 242, 55);
+    color: white;
+ 
+}
+#DZ{
+    background-color: rgb(210, 248, 107);
+
+}
+#FR{
+    background-color: rgb(31, 31, 250);
+    color: rgba(211, 25, 25);
+
+}
+
+
+
+input.FermerModel{
+    background-color: rgb(211, 25, 25);
+    border-radius: 3px;
+    color: white;
+    display: inline-block;
+    text-transform: uppercase;
+    size: 3px;
+    width: 100px;
+    margin-top: 145px;
+}
+
     </style>
 </head>
 <header><h1><img src="France.png" > Apprendre le dialecte algérien <img src="Algérie.png" ></h1></header>
 <body>
+    <div id="model">
+        <div id="Result">
+            <h3 id="DZFR"></h3>
+            <h3 id="FR"></h3>
+            <h3 id="DZ"></h3>
+        </div>
+     <input class="FermerModel" type="button" value="Fermer" onclick="Fermer()">
+    </div>
     
 <div class="paramètres">
-    <h2>Le temps souhaité:</h2>
-
-    <input class="temps"
-       type="button"
-       value="présent">
-       <input class="temps"
-       type="button"
-       value="passé">
-       <input class="temps"
-       type="button"
-       value="future">
-    <ul>
-    <select id="choix"  name="verbe" width="300px">
+    <h2>Le temps souhaité:   <select id="SelectTenses"  name="temps" width="300px">
+        <option >PRESENT</option>
+        <option >PASSE </option>
+        <option >FUTURE </option>
+        <option >IMPERATIVE </option>
+       </select> </h2>
+         <ul>
+    <select id="ChoixVerbe"  name="verbe" width="300px">
         <option id=" ">-- sélectionnez un verbe --</option>
         <option id="Accélérer">Accélérer </option>
         <option id="Acheter">Acheter</option>
@@ -183,7 +240,7 @@ footer{
        
       </select>
 
-      <select id="choix"  name="verbe" width="300px">
+      <select id="ChoixNom"  name="nom" width="300px">
         <option id=" ">-- sélectionnez un nom --</option>
         <option id="Assiette">Assiette(s)</option>
         <option id="Chambre">Chambre(s)</option>
@@ -204,7 +261,7 @@ footer{
         
       </select>
 
-      <select id="choix"  name="adjectif" width="300px">
+      <select id="ChoixAdjectif"  name="adjectif" width="300px">
         <option id=" ">-- sélectionnez un adjectif --</option>
 
         <option id="Assis">Assis(e)(s)</option>
@@ -244,14 +301,15 @@ footer{
 <img src="Dialecte.PNG" width="300" >
 </div>
 <p>
-    <label for="tentacles">Le nombre de phrase souhaité :</label>
-    <input type="number" min ="1" max="9"/>
+    <label for="NombreDePhrase" >Le nombre de phrase souhaité :</label>
+    <input id ="nbr" type="number" min ="1" max="9" value ="1"/>
 </p>
 
    
-    <input id="valider"
+    <input id="Afficher"
        type="button"
-       value="Valider">
+       value="Afficher" 
+       onclick="Afficher()">
 
        <footer>
         <font size="1">V1.0.0</font>
