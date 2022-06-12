@@ -1,19 +1,3 @@
-function Présent(){ 
-    var TempsUtilisé = document.getElementById("PRESENT").value;
-    console.log(TempsUtilisé);
-      
-}
-function Passé(){ 
-    var TempsUtilisé  = document.getElementById("PASSE").value;
-    console.log(TempsUtilisé);  
-     
-}
-function Future(){ 
-    var TempsUtilisé  = document.getElementById("FUTURE").value;
-    console.log(TempsUtilisé);  
-    
-}
-
 
 
 function Callback(data) {
@@ -22,7 +6,7 @@ function Callback(data) {
     
     document.getElementById("DZFR").innerHTML = "La phrase en algérien : \"" + data.sentences[0].dz_value + "\"";
     document.getElementById("FR").innerHTML = "La phrase en français : \"" + data.sentences[0].fr_value + "\"";
-    document.getElementById("DZ").innerHTML = "La phrase en caractères arabe : \"" + data.sentences[0].dz_value_ar + "\"";
+    document.getElementById("DZ").innerHTML = "La phrase en caractères arabes : \"" + data.sentences[0].dz_value_ar + "\"";
     document.getElementById("model").style.top = "110px";}
 
 }
